@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-use-before-define
 import React, { useCallback, useRef } from "react";
 import { FiArrowLeft, FiMail, FiUser, FiLock } from "react-icons/fi";
 import { FormHandles } from "@unform/core";
@@ -15,6 +16,7 @@ import { Container, Content, Background } from "./styles";
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
+  // eslint-disable-next-line @typescript-eslint/ban-types
   const handleSubmit = useCallback(async (data: object) => {
     try {
       formRef.current?.setErrors({});
