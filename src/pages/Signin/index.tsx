@@ -24,7 +24,9 @@ interface SignInFormData {
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const { signIn } = useContext(AuthContext);
+  const { user, signIn } = useContext(AuthContext);
+
+  console.log(user);
 
   // eslint-disable-next-line @typescript-eslint/ban-types
   const handleSubmit = useCallback(
